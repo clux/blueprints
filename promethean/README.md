@@ -48,7 +48,7 @@
 - documented all combinators
 
 ## Hiwashi 0
-~2150 tons. ~193k eggs.
+~2150 tons. ~195k eggs.
 Basically Hobbit's 3-grab Pella but with;
 
 - 3 extra grabbers on each side to supplement early gathering.
