@@ -1,7 +1,11 @@
 # hiwashi / 火鷲
 
+unstacked prometheum gathering ship in version order.
 
-## Hiwashi 6
+## Current Active Versions
+6 is experimental, but is slightly better.
+
+### [Hiwashi 6](./hiwashi6.txt)
 1587 tons. 216k eggs.
 
 - -20 tons lighter than hiwashi 5.
@@ -12,7 +16,7 @@
 - cut some turrets around center
 - circuit layout tweaks
 
-## Hiwashi 5
+### [Hiwashi 5](./hiwashi5.txt)
 
 1607 tons. 215k eggs.
 **the one from the youtube video**.
@@ -22,32 +26,36 @@
 - extra weight reduction around carbonic
 - lower quality turrets for less particle action and less duplicate targeting.
 
-## Hiwashi 4
+## Legacy Versions
+All gathered in the [legacy.txt](./legacy.txt) blueprint.
+Rough changelog between them here for posterity
+
+### Hiwashi 4
 1614 tons
 
 - carbonic minor improvements.
 
-## Hiwashi 3
+### Hiwashi 3
 1640 tons. ~210k eggs.
 
 - DI carbonic + smelting. clocked collectors.
 - astroid scaled for astroid prod 30. add beacons on ice if lower.
 - speculative early load with prom, aborts if not researching
 
-## Hiwashi 2
+### Hiwashi 2
 1800ish tons. 205k eggs.
 
 - dropped central sushi belt
 - closer venting (underneath)
 - minimised carbonic site for EXPL31 and dropped lasers
 
-## Hiwashi 1
+### Hiwashi 1
 ~2000 tons. ~200k eggs.
 
 - side spoilers (holes) for aerodynamic efficiency (less weight => more speed)
 - documented all combinators
 
-## Hiwashi 0
+### Hiwashi 0
 ~2150 tons. ~195k eggs.
 Basically Hobbit's 3-grab Pella but with;
 
