@@ -5,16 +5,32 @@ unstacked prometheum gathering ship in version order.
 ## Current Active Versions
 6 is experimental, but is slightly better.
 
-### [Hiwashi 6](./hiwashi6.txt)
-1587 tons. 216k eggs.
+### [Hiwashi 6.2](./hiwashi6.txt)
+1571 tons. 216k eggs.
 
-- -20 tons lighter than hiwashi 5.
-- added 6 inline bays, removed 6 bays on side (==weight diff)
-- 492km/s now top speed. (+0.4km/s)
+- 36 tons lighter than hiwashi 5.
+- added 6 inline bays, removed 6 bays on side
+- carbonic shifted left with beacons (killed ~5 tons)
+- better carbonic belt weave (-5 tons)
+- 492.4km/s now top speed. (+0.8km/s)
 - cut 250MW power (down 750MW -> 500MW); unused, some accumulators to even out
-- cut 2 rocket beacons (3.4k/m peak production now)
-- cut some turrets around center
+- cut 3 rocket beacons (3.3k/m still), 1fuel beacon
+- shifted fuel in
+- cut some turrets around center, shifted tesla top right
+- -5 tiles by oxide
+- more likely to get through 216k eggs now
 - circuit layout tweaks
+
+Probably last iteration of this type of ship I make. Diminishing return on speed improvement now.
+Biggest improvement at this point is to have more cryos to take advantage of peak promethean grabbing in the deep field, but that would require a huge redesign.
+
+If I come back to this, then big redesign to try:
+- 6 cryos (to never allow promethean chunk belts to back up) and maintain current width would be ideal
+- reduce rockets more. with legendary rails and low quality launchers, we can reduce to 2.9k/m rocket usage. with belt buffer we could scale to 2.5k/m given explosive 31.
+- try to get 1 ship to produce the equivalent of 1 full belt (240/s) of promethean science (current 9/8 ratio feels bad).
+  * this would require 720k science per trip over 50m (`720*1000science/(50*60s) = 240/s`) which means (incidentally) 240k eggs (`720/3=240`)
+
+might try this in 2.1 since apparently there are breaking changes planned.
 
 ### [Hiwashi 5](./hiwashi5.txt)
 
