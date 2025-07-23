@@ -35,7 +35,7 @@ might try this in 2.1 since apparently there are breaking changes planned.
 ### [Hiwashi 5](./hiwashi5.txt)
 
 1607 tons. 215k eggs.
-**the one from the youtube video**.
+**the one from the [youtube video](https://www.youtube.com/watch?v=NU-C7koOvI8)**.
 
 - 6 tiles shorter in height than hiwashi 4
 - moved venting up to the top. had to shift mid-section a little to the left

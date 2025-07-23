@@ -2,6 +2,8 @@
 
 Hub scaled for the equivalent of 8 full green belts (8*240 science /s) pulling the 5 space sciences.
 
+**[VIDEO](https://www.youtube.com/watch?v=xeGZn7eqvY4)**
+
 Expects;
 
 - Q2 Cryo/Metallurgic
