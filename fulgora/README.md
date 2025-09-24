@@ -8,7 +8,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 minor tweaks and optimizations from feedback. cars and inserters are breaking changes.
 
 - tweaked q2 trashing to use less inserters and circuits with thresholds
-- removed 9 cars by q2 (less inserters now)
+- removed 9 cars by q2 (less inserters now). => 6000 cars destroyed per hour.
 - removed random combinator by q1 superconductors via MRX8024
 - added very slow q5 holm export. unoptimized, mostly for fun. remove chest + inserter if unneeded.
 
