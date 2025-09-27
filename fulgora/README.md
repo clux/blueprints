@@ -4,19 +4,22 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 4.0](./fulgora-train4.txt)
+## [Train Island 4.1](./fulgora-train4.txt)
 minor tweaks and optimizations from feedback. cars and inserters are breaking changes.
 
 - tweaked q2 trashing to use less inserters and circuits with thresholds
-- removed 9 cars by q2 (less inserters now). => 6000 cars destroyed per hour.
+- removed 11 cars by q2 (less inserters now). => 6000 cars destroyed per hour.
 - removed random combinator by q1 superconductors via MRX8024
 - added very slow q5 holm export. unoptimized, mostly for fun. remove chest + inserter if unneeded.
+- repositioned bus cars (not all were active despite showing up, and didn't notice because of leeway)
+- removed unnecessary inserters around the bus
 
-if migrating from 3->4;
+if migrating from 3 -> 4.1;
 - remove ALL inserters that target cars from top/bottom q2 recycling area (from q2 silos)
-- filter out trains/tanks/cars from the blueprint
+- remove ALL cars
+- remove the middle bus area between the rails and between the chests with cars
+- filter out trains/tanks from the blueprint (leave cars)
 - force plant blueprint over
-- remove 9 extranuous cars on the track not targeted by any inserters
 - fix stuck bots and repopulate bot networks if necessary
 
 ## [Train Island 3.0](./fulgora-train3.txt)
