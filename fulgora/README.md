@@ -13,6 +13,7 @@ minor tweaks and optimizations from feedback. cars and inserters are breaking ch
 - added very slow q5 holm export. unoptimized, mostly for fun. remove chest + inserter if unneeded.
 - repositioned bus cars (not all were active despite showing up, and didn't notice because of leeway)
 - removed unnecessary inserters around the bus
+- made blueprint 3 stage to avoid stuck tanks; 1. crosshair, 2. everything except beacons, 3. everything except vehicles
 
 if migrating from 3 -> 4.1;
 - remove ALL inserters that target cars from top/bottom q2 recycling area (from q2 silos)
