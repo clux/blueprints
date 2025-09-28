@@ -4,8 +4,31 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
+## [Train Island 5.1](./fulgora-train5.txt)
+full redesign.
+
+- 4 silos per island (down from 20)
+- reuse of fluid production on main bus
+  * halved cryos for sulfur/sulfuric
+  * halved oil, light oil
+  * halved supercaps EMs (but streamlined)
+  * halved number of battery cryos
+  * halved number of ice chem plants
+  * halved engine production
+  * quartered pipe production
+- wagon tech for sorting
+- bus optimization, shared output tick clock
+- recycler optimization (4 less Q1 recyclers, but they run more frequently)
+- sorting optimization
+  * less shuffling Q1 scrap, most taken from first wagon
+  * less wakelists chaos around silos, output/input circuitry for battery
+- 22 cars per island (down from 27 in v4 or 38 in v3) => 5600 cars per hour
+- 365 stack inserters, 99 bulk. lots of inserter selector logic to minimize inserters. (saved ~100 total)
+- output clock on science
+- tank buffer removal everywhere except science (wakelists bad when the tank was full)
+
 ## [Train Island 4.1](./fulgora-train4.txt)
-minor tweaks and optimizations from feedback. cars and inserters are breaking changes.
+minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
 
 - tweaked q2 trashing to use less inserters and circuits with thresholds
 - removed 11 cars by q2 (less inserters now). => 6000 cars destroyed per hour.
