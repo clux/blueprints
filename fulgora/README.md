@@ -18,12 +18,15 @@ full redesign.
   * quartered pipe production
 - wagon tech for sorting
 - bus optimization, shared output tick clock
+- input gated stack inserters on q2 holmium, electrolyte, batteries
 - recycler optimization (4 less Q1 recyclers, but they run more frequently)
 - sorting optimization
   * less shuffling Q1 scrap, most taken from first wagon
+  * less blue/lds crushing activity (we wasted outputs before, lds circuit was also wrong)
   * less wakelists chaos around silos, output/input circuitry for battery
-- 22 cars per island (down from 27 in v4 or 38 in v3) => 5600 cars per hour
-- 365 stack inserters, 99 bulk. lots of inserter selector logic to minimize inserters. (saved ~100 total)
+  * significantly less thrown away items
+- 26 cars per island (down from 31 in v4 or 43 in v3) => 5600 cars per hour
+- 381 stack inserters, 82 bulk. lots of inserter selector logic to minimize inserters. (saved ~100 total)
 - output clock on science
 - tank buffer removal everywhere except science (wakelists bad when the tank was full)
 
