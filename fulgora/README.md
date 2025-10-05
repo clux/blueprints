@@ -4,13 +4,13 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.2](./fulgora-train5.txt)
+## [Train Island 5.3](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
-- reuse of fluid production on main bus
-  * halved cryos for sulfur/sulfuric
-  * halved oil, light oil
+- common items/fluids produced on the main bus and shared across halves
+  * quartered cryos for sulfur/sulfuric
+  * quartered oil, light oil
   * halved supercaps EMs (but streamlined)
   * halved number of battery cryos
   * halved number of ice chem plants (sharing water now)
@@ -23,12 +23,14 @@ full redesign.
 - sorting optimization
   * less shuffling Q1 scrap, most taken from first wagon
   * less blue/lds crushing activity (we wasted outputs before, lds circuit was also wrong)
-  * less wakelists chaos around silos, output/input circuitry for battery
+  * all q2 waste circuit filtered into one car per quadrant
+  * almost zero wakelists around q2 silos, output/input circuitry for battery
   * significantly less thrown away items
-- 24 trash cars per island (down from 31 in v4 or 43 in v3) => 5600 cars per hour
-- 391 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~100 total)
-- output clock on science (from precise production ratio)
-- cheap input clock on science (one network per EM, not the best, but doesn't deadlock)
+- 20 trash cars per island (down from 31 in v4 or 43 in v3) => 4000 cars per hour
+- 367 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~120 total)
+- science clocking;
+  * global output clock on science (green wire)
+  * global lead follower clock on science input (red wire)
 - belt latch on accumulators (overbeaconed so they are active 60% of the time)
 - filtered stack inserters for Q3+ overflow from foundaries and cars
 - hibernation system; hibernating when 9m since last science request && export buffers full (checking one quadrant only)
