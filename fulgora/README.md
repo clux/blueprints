@@ -25,7 +25,7 @@ full redesign.
   * less blue/lds crushing activity (we wasted outputs before, lds circuit was also wrong)
   * less wakelists chaos around silos, output/input circuitry for battery
   * significantly less thrown away items
-- 24 trash cars per island (down from 30 in v4 or 42 in v3) => 5600 cars per hour
+- 24 trash cars per island (down from 31 in v4 or 43 in v3) => 5600 cars per hour
 - 391 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~100 total)
 - output clock on science (from precise production ratio)
 - cheap input clock on science (one network per EM, not the best, but doesn't deadlock)
