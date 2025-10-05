@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.1](./fulgora-train5.txt)
+## [Train Island 5.2](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
@@ -13,7 +13,7 @@ full redesign.
   * halved oil, light oil
   * halved supercaps EMs (but streamlined)
   * halved number of battery cryos
-  * halved number of ice chem plants
+  * halved number of ice chem plants (sharing water now)
   * halved engine production
   * quartered pipe production
 - wagon tech for sorting
@@ -25,10 +25,15 @@ full redesign.
   * less blue/lds crushing activity (we wasted outputs before, lds circuit was also wrong)
   * less wakelists chaos around silos, output/input circuitry for battery
   * significantly less thrown away items
-- 26 cars per island (down from 31 in v4 or 43 in v3) => 5600 cars per hour
-- 381 stack inserters, 82 bulk. lots of inserter selector logic to minimize inserters. (saved ~100 total)
-- output clock on science
+- 28 trash cars per island (down from 30 in v4 or 42 in v3) => 5600 cars per hour
+- 391 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~100 total)
+- output clock on science (from precise production ratio)
+- cheap input clock on science (one network per EM, not the best, but doesn't deadlock)
+- belt latch on accumulators (overbeaconed so they are active 60% of the time)
+- filtered stack inserters for Q3+ overflow from foundaries and cars
+- hibernation system; hibernating when 9m since last science request && export buffers full (checking one quadrant only)
 - tank buffer removal everywhere except science (wakelists bad when the tank was full)
+
 
 ## [Train Island 4.1](./fulgora-train4.txt)
 minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
