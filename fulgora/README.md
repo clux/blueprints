@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.4](./fulgora-train5.txt)
+## [Train Island 5.5](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
@@ -41,7 +41,7 @@ full redesign.
 caveats:
 - not compatible with v3/v4. tear down old island and replant.
 - ensure accumulator inserters are going. sometimes they need replanting (only planted in stage 3 atm to try to counteract it)
-- ensure accumulator EMs are not output stuck (we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the measurement)
+- ensure accumulator EMs are not output stuck initially (we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the measurement)
 - do NOT place any vehicles twice. ensure no bots are stuck trying to place any more vehicles (otherwise the vehicles might not be insertable and everything will backlog)
 - q2 silos may be stuck under anomalous conditions early on. help out if necessary for first 5m.
 
