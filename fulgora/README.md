@@ -26,7 +26,7 @@ full redesign.
   * all q2 waste circuit filtered into one car per quadrant
   * almost zero wakelists around q2 silos, output/input circuitry for battery
   * significantly less thrown away items
-- 20 trash cars per island (down from 31 in v4 or 43 in v3) => 4000 cars per hour
+- 20 trash cars per island (down from 31 in v4 or 43 in v3) => 3800 cars per hour
 - 367 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~120 total)
 - science clocking;
   * global output clock on science (green wire)
@@ -35,8 +35,15 @@ full redesign.
 - filtered stack inserters for Q3+ overflow from foundaries and cars
 - hibernation system; hibernating when 9m since last science request && export buffers full (checking one quadrant only)
 - tank buffer removal everywhere except science (wakelists bad when the tank was full)
-- train tuned to 6s + 7s wait (max for bettery uptime) with new network name
+- train tuned to 5s + 6s wait (max for sustained battery uptime) with new network name
+- scrap; now Q1 109k/m and Q2 32k/m (12% reduction)
 
+caveats:
+- not compatible with v3/v4. tear down old island and replant.
+- ensure accumulator inserters are going. sometimes they need replanting (only planted in stage 3 atm to try to counteract it)
+- ensure accumulator EMs are not output stuck (we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the measurement)
+- do NOT place any vehicles twice. ensure no bots are stuck trying to place any more vehicles (otherwise the vehicles might not be insertable and everything will backlog)
+- q2 silos may be stuck under anomalous conditions early on. help out if necessary for first 5m.
 
 ## [Train Island 4.1](./fulgora-train4.txt)
 minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
