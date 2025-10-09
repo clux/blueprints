@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.6](./fulgora-train5.txt)
+## [Train Island 5.7](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
@@ -47,6 +47,7 @@ caveats:
 - ensure accumulator inserters are going. sometimes they need replanting (only planted in stage 3 atm to try to counteract it)
 - ensure accumulator EMs are not output stuck initially (we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the measurement)
 - do NOT place any vehicles twice. ensure no bots are stuck trying to place any more vehicles (otherwise the vehicles might not be insertable and everything will backlog)
+- car production cannot exceed [84 cars/m](https://factoriolab.github.io/spa/list?z=eJw1jzEOgzAMRW-TIUNFCrQsXpxWYqASQ09A1QHUQBsQlRh89n5XYbD.c75tORONtirMk6w3HVU2Q3aaKkSBOOnD0US6ZNbCBtx2WAEO4CNAe3wLyNX6AgqFGVAqLHvz528F4kaHoLnOQIdU10nHpDHpQRf084K7wjtSaUKItMlZcuFGeBMGDMK18Cgche.Cq3ArfDBd6PGvLDOv6UEs3l7NSs79ABXuRJE_&v=11) (roughly 5000 cars/h) with the single 8 beacon engine assembler (do not lower train waits too much, check usage)
 
 ## [Train Island 4.1](./fulgora-train4.txt)
 minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
