@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.5](./fulgora-train5.txt)
+## [Train Island 5.6](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
@@ -14,7 +14,7 @@ full redesign.
   * halved supercaps EMs (but streamlined)
   * halved number of battery cryos
   * halved number of ice chem plants (sharing water now)
-  * halved engine production
+  * quartered engine production
   * quartered pipe production
 - wagon tech for sorting
 - bus optimization, shared output tick clock
@@ -25,15 +25,19 @@ full redesign.
   * less blue/lds crushing activity (we wasted outputs before, lds circuit was also wrong)
   * all q2 waste circuit filtered into one car per quadrant
   * almost zero wakelists around q2 silos, output/input circuitry for battery
+  * better silo limits for battery silo
   * significantly less thrown away items
 - 20 trash cars per island (down from 31 in v4 or 43 in v3) => 3800 cars per hour
-- 367 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~120 total)
+- 354 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
+- 49 recyclers (down 10)
 - science clocking;
   * global output clock on science (green wire)
   * global lead follower clock on science input (red wire)
 - belt latch on accumulators (overbeaconed so they are active 60% of the time)
 - filtered stack inserters for Q3+ overflow from foundaries and cars
-- hibernation system; hibernating when 9m since last science request && export buffers full (checking one quadrant only)
+- hibernation system; hibernating when 9m since last science request && export buffers full
+  * caveat; checks one quadrant only, if you pull q1 holmium without q2 holmium it might not hibernate (but this should only happen for rocket prod)
+  * hibernation wire sent down to bus to shut down bus inserter networks
 - tank buffer removal everywhere except science (wakelists bad when the tank was full)
 - train tuned to 5s + 6s wait (max for sustained battery uptime) with new network name
 - scrap; now Q1 109k/m and Q2 32k/m (12% reduction)
@@ -43,7 +47,6 @@ caveats:
 - ensure accumulator inserters are going. sometimes they need replanting (only planted in stage 3 atm to try to counteract it)
 - ensure accumulator EMs are not output stuck initially (we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the measurement)
 - do NOT place any vehicles twice. ensure no bots are stuck trying to place any more vehicles (otherwise the vehicles might not be insertable and everything will backlog)
-- q2 silos may be stuck under anomalous conditions early on. help out if necessary for first 5m.
 
 ## [Train Island 4.1](./fulgora-train4.txt)
 minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
@@ -66,7 +69,7 @@ if migrating from 3 -> 4.1;
 
 ## [Train Island 3.0](./fulgora-train3.txt)
 
-- 240.4 q2 em science / s
+- 240.8 q2 em science / s
 - 4.75k q2 holm / m (250/m excess for exports)
 - 59 recyclers
 - 4 quality miners
