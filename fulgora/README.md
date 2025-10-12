@@ -4,20 +4,21 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.10](./fulgora-train5.txt)
+## [Train Island 5.11](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
 - common items/fluids produced on the main bus and shared across halves
-  * quartered cryos for sulfur/sulfuric
+  * quartered cryos for sulfur/sulfuric (shared sulfuric + light oil)
   * quartered oil, light oil
-  * halved supercaps EMs (but streamlined)
+  * halved supercaps EMs
   * halved number of battery cryos
-  * halved number of ice chem plants (sharing water now)
+  * halved number of ice chem plants (shared water)
   * quartered engine production
   * quartered pipe production
 - wagon tech for sorting
-- bus optimization, shared output tick clock
+- shared bus tick clock
+- design around holmium ore; don't recycle more if we don't need it (less q1 recyclers)
 - input gated stack inserters on q2 holmium, electrolyte, batteries
 - recycler optimization (4 less Q1 recyclers, but they run more frequently)
 - sorting optimization
@@ -26,20 +27,21 @@ full redesign.
   * all q2 waste circuit filtered into one car per quadrant
   * almost zero wakelists around q2 silos, output/input circuitry for battery
   * better silo limits for battery silo
-  * significantly less thrown away items
-- 20 trash cars per island (down from 31 in v4 or 43 in v3) => 3800 cars per hour
-- 352 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
+  * significantly less thrown away useful items
+- 20 trash cars per island (down from 31 in v4 or 43 in v3) => ~3800 cars per hour
+- 350 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
 - 49 recyclers (down 10)
 - science clocking;
   * global output clock on science (green wire)
   * global lead follower clock on science input (red wire)
 - belt latch on accumulators (overbeaconed so they are active 60% of the time)
-- filtered stack inserters for Q3+ overflow from foundaries and cars
 - hibernation system; hibernating when 9m since last science request && export buffers full
   * caveat; checks one quadrant only, if you pull q1 holmium without q2 holmium it might not hibernate (but this should only happen for rocket prod)
   * hibernation wire sent down to bus to shut down bus inserter networks
 - tank buffer removal everywhere except science (wakelists bad when the tank was full)
-- train tuned to 6s + 7s wait (max for sustained battery uptime) with new network name
+- dynamic train schedule (with new network name)
+  * regular service; train tuned to 6s + 7s wait (max for sustained battery uptime)
+  * rapid service; train tuned to 5s +5s wait (increased holmium ore for q2 holmium export)
 - scrap; now Q1 109k/m and Q2 32k/m (12% reduction)
 
 caveats:
