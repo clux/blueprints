@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.13](./fulgora-train5.txt)
+## [Train Island 5.14](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
@@ -17,8 +17,9 @@ full redesign.
   * quartered engine production
   * quartered pipe production
 - wagon tech for sorting
+- wagon balancing clock
 - shared bus tick clock
-- design around holmium ore; don't recycle more if we don't need it (less q1 recyclers)
+- design around holmium ore; don't recycle more if we don't need it, but run train more if we need to export q2 plates.
 - input gated stack inserters on q2 holmium, electrolyte, batteries
 - recycler optimization (4 less Q1 recyclers, but they run more frequently)
 - sorting optimization
@@ -28,9 +29,8 @@ full redesign.
   * almost zero wakelists around q2 silos, output/input circuitry for battery
   * better silo limits for battery silo
   * significantly less thrown away useful items
-- 20 trash cars per island (down from 31 in v4 or 43 in v3) => ~3800 cars per hour
-- 350 stack inserters, 66 bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
-- 49 recyclers (down 10)
+- 18 trash cars per island (down from 31 in v4 or 43 in v3) => ~3600 cars per hour
+- `~350` stack inserters, `~70` bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
 - science clocking;
   * global output clock on science (green wire)
   * global lead follower clock on science input (red wire)
@@ -42,7 +42,7 @@ full redesign.
 - dynamic train schedule (with new network name)
   * regular service; train tuned to 6s + 7s wait (max for sustained battery uptime)
   * rapid service; train tuned to 5s +5s wait (increased holmium ore for q2 holmium export)
-- scrap; now Q1 109k/m and Q2 32k/m (12% reduction)
+- TODO: recalculate. dynamic based on rapid/regular svc.. scrap; now Q1 109k/m and Q2 32k/m (12% reduction)
 
 caveats:
 - not compatible with v3/v4. tear down old island and replant.
