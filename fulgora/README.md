@@ -21,7 +21,6 @@ full redesign.
 - shared bus tick clock
 - design around holmium ore; don't recycle more if we don't need it, but run train more if we need to export q2 plates.
 - input gated stack inserters on q2 holmium, electrolyte, batteries
-- recycler optimization (4 less Q1 recyclers, but they run more frequently)
 - sorting optimization
   * less shuffling Q1 scrap, most taken from first wagon
   * less blue/lds crushing activity (we wasted outputs before, lds circuit was also wrong)
@@ -29,7 +28,7 @@ full redesign.
   * almost zero wakelists around q2 silos, output/input circuitry for battery
   * better silo limits for battery silo
   * significantly less thrown away useful items
-- 18 trash cars per island (down from 31 in v4 or 43 in v3) => ~3600 cars per hour
+- 18 trash cars per island (down from 31 in v4 or 43 in v3) => ~3200 cars per hour. most fully utilized.
 - `~350` stack inserters, `~70` bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
 - science clocking;
   * global output clock on science (green wire)
@@ -42,7 +41,7 @@ full redesign.
 - dynamic train schedule (with new network name)
   * regular service; train tuned to 6s + 7s wait (max for sustained battery uptime)
   * rapid service; train tuned to 5s +5s wait (increased holmium ore for q2 holmium export)
-- TODO: recalculate. dynamic based on rapid/regular svc.. scrap; now Q1 109k/m and Q2 32k/m (12% reduction)
+- scrap use around Q1 110k/m and Q2 33k/m (12% reduction). but dynamic based on q2 holmium pull.
 
 caveats:
 - not compatible with v3/v4. tear down old island and replant.
