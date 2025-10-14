@@ -41,6 +41,7 @@ full redesign.
 - dynamic train schedule (with new network name)
   * regular service; train tuned to 6s + 7s wait (max for sustained battery uptime)
   * rapid service; train tuned to 5s +5s wait (increased holmium ore for q2 holmium export)
+- dynamic export system; capture excess q2 holmium if sufficient holmium fluid (will speed up the train until buffers are full)
 - scrap use around Q1 110k/m and Q2 33k/m (12% reduction). but dynamic based on q2 holmium pull.
 
 caveats:
