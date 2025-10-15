@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.14](./fulgora-train5.txt)
+## [Train Island 5.15](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
@@ -26,10 +26,11 @@ full redesign.
   * less blue/lds crushing activity (we wasted outputs before, lds circuit was also wrong)
   * all q2 waste circuit filtered into one car per quadrant
   * almost zero wakelists around q2 silos, output/input circuitry for battery
-  * better silo limits for battery silo
-  * significantly less thrown away useful items
+  * heavily tuned limits/circuitry around q2 silos
+  * extra recycler to allow lower q2 scrap use (crushes reds/greens occasionally)
+  * significantly less thrown away useful items, significantly lower train requirements
 - 18 trash cars per island (down from 31 in v4 or 43 in v3) => ~3200 cars per hour. most fully utilized.
-- `~350` stack inserters, `~70` bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
+- `~350` stack inserters, `~80` bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
 - science clocking;
   * global output clock on science (green wire)
   * global lead follower clock on science input (red wire)
@@ -39,10 +40,10 @@ full redesign.
   * hibernation wire sent down to bus to shut down bus inserter networks
 - tank buffer removal everywhere except science (wakelists bad when the tank was full)
 - dynamic train schedule (with new network name)
-  * regular service; train tuned to 6s + 7s wait (max for sustained battery uptime)
-  * rapid service; train tuned to 5s +5s wait (increased holmium ore for q2 holmium export)
+  * regular service; train tuned to 8s + 8s wait (holmium blocked)
+  * rapid service; train tuned to 5s +5s wait (for more holmium for q2 holmium plate export)
 - dynamic export system; capture excess q2 holmium if sufficient holmium fluid (will speed up the train until buffers are full)
-- scrap use around Q1 110k/m and Q2 33k/m (12% reduction). but dynamic based on q2 holmium pull.
+- TODO: recalculate. ??was: scrap use around Q1 110k/m and Q2 33k/m (12% reduction). but dynamic based on q2 holmium pull.
 
 caveats:
 - not compatible with v3/v4. tear down old island and replant.
