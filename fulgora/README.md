@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.16](./fulgora-train5.txt)
+## [Train Island 5.17](./fulgora-train5.txt)
 full redesign.
 
 - 4 silos per island (down from 20)
@@ -16,41 +16,48 @@ full redesign.
   * halved number of ice chem plants (shared water)
   * quartered engine production
   * quartered pipe production
-- wagon tech for sorting
-- wagon balancing clock
+- wagon tech for sorting (less silo costs, but worse symmetry)
+- wagon balancing clock (quadrants have uneven q1 component pull)
 - shared bus tick clock
-- design around holmium ore; don't recycle more if we don't need it, but run train more if we need to export q2 plates.
-- input gated stack inserters on q2 holmium, electrolyte, batteries
+- design around holmium ore; don't recycle more if we don't need it, but run train more if we run low on q2 exports.
+- input gated stack inserters on q2 holmium, electrolyte, batteries, accumulators, super*
 - sorting optimization
   * less shuffling Q1 scrap, most taken from first wagon
   * less blue/lds crushing activity (we wasted outputs before, lds circuit was also wrong)
   * all q2 waste circuit filtered into one car per quadrant
   * almost zero wakelists around q2 silos, output/input circuitry for battery
   * heavily tuned limits/circuitry around q2 silos
-  * extra recycler to allow lower q2 scrap use (crushes reds/greens occasionally)
   * significantly less thrown away useful items, significantly lower train requirements
 - 18 trash cars per island (down from 31 in v4 or 43 in v3) => ~3200 cars per hour. most fully utilized.
 - `~350` stack inserters, `~80` bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
-- science clocking;
-  * global output clock on science (green wire)
-  * global lead follower clock on science input (red wire)
+- science EM clock; global tick output clock (green) + global lead follower input clock (red)
 - belt latch on accumulators (overbeaconed so they are active 60% of the time)
-- hibernation system; hibernating when 9m since last science request && export buffers full
-  * caveat; checks one quadrant only, if you pull q1 holmium without q2 holmium it might not hibernate (but this should only happen for rocket prod)
-  * hibernation wire sent down to bus to shut down bus inserter networks
-- tank buffer removal everywhere except science (wakelists bad when the tank was full)
+- hibernation system; hibernating when 15m since last science request && export buffers full
+- tank buffer removal everywhere except science (wakelists bad when the tank was full - science clock avoids this)
 - dynamic train schedule (with new network name)
-  * regular service; train tuned to 8s + 8s wait (holmium blocked)
+  * regular service; train tuned to 7s + 7s wait
   * rapid service; train tuned to 5s +5s wait (for more holmium for q2 holmium plate export)
 - dynamic export system; capture excess q2 holmium if sufficient holmium fluid (will speed up the train until buffers are full)
-- TODO: recalculate. ??was: scrap use around Q1 110k/m and Q2 33k/m (12% reduction). but dynamic based on q2 holmium pull.
+- scrap use: dynamic based holmium exports; Q1 110k/m rapid, 100k/m regular. Q2 35k/m rapid, 32k/m regular
+- holmium export; up to 2500 q2 plates/m on rapid / 2000 q2 plates/m on regular.
 
 caveats:
 - not compatible with v3/v4. tear down old island and replant.
-- ensure accumulator inserters are going. sometimes they need replanting (only planted in stage 3 atm to try to counteract it)
-- ensure accumulator EMs are not output stuck initially (we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the measurement)
-- do NOT place any vehicles twice. ensure no bots are stuck trying to place any more vehicles (otherwise the vehicles might not be insertable and everything will backlog)
-- car production cannot exceed [84 cars/m](https://factoriolab.github.io/spa/list?z=eJw1jzEOgzAMRW-TIUNFCrQsXpxWYqASQ09A1QHUQBsQlRh89n5XYbD.c75tORONtirMk6w3HVU2Q3aaKkSBOOnD0US6ZNbCBtx2WAEO4CNAe3wLyNX6AgqFGVAqLHvz528F4kaHoLnOQIdU10nHpDHpQRf084K7wjtSaUKItMlZcuFGeBMGDMK18Cgche.Cq3ArfDBd6PGvLDOv6UEs3l7NSs79ABXuRJE_&v=11) (roughly 5000 cars/h) with the single 8 beacon engine assembler (do not lower train waits too much, check usage)
+- do not replant stage 2 twice (unless you remove the vehicles first; bots will get stuck, and some vehicles become non-insertable)
+- plant blueprints in order with playtime between them (not editor paused)
+  * inserters need to target correct vehicles before beacons or rails are placed
+  * beacons need to activate before ingredient flow in Q2 (otherwise accumulator EMs/supers can get soft-locked)
+
+fixing broken deploys / softlocks:
+- low batteries or science components?
+  * inserters to outer cars stuck "waiting for train"? temporarily remove rails UNDER the car to force target the car.
+  * accumulator inserters stuck? replant them. can happen if started before beacons were down with modules.
+  * accumulator EMs stuck with 15 output? we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the given measurement. can also happen with early lack of beacons.
+- bots stuck placing vehicles over other vehicles? manually fix, pick up bots, or place a yellow chest and cancel building requests. replant vehicles from blueprint (ideally not triggering the same issue)
+- out of cars? car production cannot exceed [84 cars/m](https://factoriolab.github.io/spa/list?z=eJw1jzEOgzAMRW-TIUNFCrQsXpxWYqASQ09A1QHUQBsQlRh89n5XYbD.c75tORONtirMk6w3HVU2Q3aaKkSBOOnD0US6ZNbCBtx2WAEO4CNAe3wLyNX6AgqFGVAqLHvz528F4kaHoLnOQIdU10nHpDHpQRf084K7wjtSaUKItMlZcuFGeBMGDMK18Cgche.Cq3ArfDBd6PGvLDOv6UEs3l7NSs79ABXuRJE_&v=11) (roughly 5000 cars/h) with the single 8 beacon engine assembler (do not lower train waits too much - it doesn't help much beyond rapid == 5s + 5s anyway)
+- some science EMs not outputting? replant the beacon next to the output inserter to force re-targeting of the buffer tank.
+- q2 silos full / stuck? usually a symptom of the battery issues above. should go away after fixing those.
+
 
 ## [Train Island 4.1](./fulgora-train4.txt)
 minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
