@@ -4,10 +4,11 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.17](./fulgora-train5.txt)
-full redesign.
+## [Train Island 5.20](./fulgora-train5.txt)
+full redesign. best performing variant.
 
 - 4 silos per island (down from 20)
+- multi stage blueprint to help avoid placement errors
 - common items/fluids produced on the main bus and shared across halves
   * quartered cryos for sulfur/sulfuric (shared sulfuric + light oil)
   * quartered oil, light oil
@@ -18,7 +19,7 @@ full redesign.
   * quartered pipe production
 - wagon tech for sorting (less silo costs, but worse symmetry)
 - wagon balancing clock (quadrants have uneven q1 component pull)
-- shared bus tick clock
+- shared bus tick clock (40 tick)
 - design around holmium ore; don't recycle more if we don't need it, but run train more if we run low on q2 exports.
 - input gated stack inserters on q2 holmium, electrolyte, batteries, accumulators, super*
 - sorting optimization
@@ -28,6 +29,7 @@ full redesign.
   * almost zero wakelists around q2 silos, output/input circuitry for battery
   * heavily tuned limits/circuitry around q2 silos
   * significantly less thrown away useful items, significantly lower train requirements
+  * corner recycler on q2 fills up on q2 iron/copper/circuits during slow periods to allow longer hibernation
 - 18 trash cars per island (down from 31 in v4 or 43 in v3) => ~3200 cars per hour. most fully utilized.
 - `~350` stack inserters, `~80` bulk. lots of inserter selector logic to minimize inserters. (saved ~130 total)
 - science EM clock; global tick output clock (green) + global lead follower input clock (red)
@@ -35,17 +37,18 @@ full redesign.
 - hibernation system; hibernating when 15m since last science request && export buffers full
 - tank buffer removal everywhere except science (wakelists bad when the tank was full - science clock avoids this)
 - dynamic train schedule (with new network name)
-  * regular service; train tuned to 7s + 7s wait
+  * regular service; train tuned to 8s + 8s wait
   * rapid service; train tuned to 5s +5s wait (for more holmium for q2 holmium plate export)
 - dynamic export system; capture excess q2 holmium if sufficient holmium fluid (will speed up the train until buffers are full)
-- scrap use: dynamic based holmium exports; Q1 110k/m rapid, 100k/m regular. Q2 35k/m rapid, 32k/m regular
-- holmium export; up to 2500 q2 plates/m on rapid / 2000 q2 plates/m on regular.
+- scrap use: dynamic based holmium exports; Q1 120k/m rapid, 109k/m regular. Q2 35k/m rapid, 32k/m regular
+- holmium export; excess 625 q2 plates/m on rapid / 0 q2 plates/m on regular (enough holm for 240.1 science/s - starves if pulling max 240.9 consistently).
 
 caveats:
 - not compatible with v3/v4. tear down old island and replant.
-- do not replant stage 2 twice (unless you remove the vehicles first; bots will get stuck, and some vehicles become non-insertable)
+- do not replant vehicles twice (unless you remove the vehicles from stage blueprints; bots will get stuck, and some vehicles become non-insertable)
 - plant blueprints in order with playtime between them (not editor paused)
   * inserters need to target correct vehicles before beacons or rails are placed
+  * inserters by RF needs to target assembler before car is placed
   * beacons need to activate before ingredient flow in Q2 (otherwise accumulator EMs/supers can get soft-locked)
 
 fixing broken deploys / softlocks:
