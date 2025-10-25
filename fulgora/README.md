@@ -4,14 +4,14 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.20](./fulgora-train5.txt)
+## [Train Island 5.21](./fulgora-train5.txt)
 full redesign. best performing variant.
 
 - 4 silos per island (down from 20)
 - multi stage blueprint to help avoid placement errors
 - common items/fluids produced on the main bus and shared across halves
   * quartered cryos for sulfur/sulfuric (shared sulfuric + light oil)
-  * quartered oil, light oil
+  * quartered oil, light oil, heavy oil
   * halved supercaps EMs
   * halved number of battery cryos
   * halved number of ice chem plants (shared water)
