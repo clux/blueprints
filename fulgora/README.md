@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.21](./fulgora-train5.txt)
+## [Train Island 5.22](./fulgora-train5.txt)
 full redesign. best performing variant.
 
 - 4 silos per island (down from 20)
@@ -50,6 +50,7 @@ caveats:
   * inserters need to target correct vehicles before beacons or rails are placed
   * inserters by RF needs to target assembler before car is placed
   * beacons need to activate before ingredient flow in Q2 (otherwise accumulator EMs/supers can get soft-locked)
+- for the last 9% performance consider using @MRX8024 UPS mods; [disable-vehicle-particles](https://mods.factorio.com/mod/disable-vehicles-particles) + [disable-vehicles](https://mods.factorio.com/mod/disable-vehicles). the particle mod is the most advantageous.
 
 fixing broken deploys / softlocks:
 - low batteries or science components?
@@ -61,6 +62,7 @@ fixing broken deploys / softlocks:
 - some science EMs not outputting? replant the beacon next to the output inserter to force re-targeting of the buffer tank.
 - q2 silos full / stuck? usually a symptom of the battery issues above. should go away after fixing those.
 
+special thanks to @MRX8024 for beta testing + feedback + many improvements.
 
 ## [Train Island 4.1](./fulgora-train4.txt)
 minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
