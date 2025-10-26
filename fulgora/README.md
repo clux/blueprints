@@ -5,7 +5,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
 ## [Train Island 5.22](./fulgora-train5.txt)
-full redesign. best performing variant.
+full redesign. best performing variant. 240.9/s
 
 - 4 silos per island (down from 20)
 - multi stage blueprint to help avoid placement errors
@@ -41,7 +41,7 @@ full redesign. best performing variant.
   * rapid service; train tuned to 5s +5s wait (for more holmium for q2 holmium plate export)
 - dynamic export system; capture excess q2 holmium if sufficient holmium fluid (will speed up the train until buffers are full)
 - scrap use: dynamic based holmium exports; Q1 120k/m rapid, 109k/m regular. Q2 35k/m rapid, 32k/m regular
-- holmium export; excess 625 q2 plates/m on rapid / 0 q2 plates/m on regular (enough holm for 240.1 science/s - starves if pulling max 240.9 consistently).
+- holmium export; excess 625 q2 plates/m on rapid / 0 q2 plates/m on regular
 
 caveats:
 - not compatible with v3/v4. tear down old island and replant.
