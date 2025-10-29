@@ -6,6 +6,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 ## [Train Island 5.22](./fulgora-train5.txt)
 full redesign. best performing variant. 240.9/s
+
 34% more UPS than V3. See the [v5-island-bench folder](./v5-island-bench).
 
 - 4 silos per island (down from 20)
@@ -63,7 +64,7 @@ fixing broken deploys / softlocks:
 - some science EMs not outputting? replant the beacon next to the output inserter to force re-targeting of the buffer tank.
 - q2 silos full / stuck? usually a symptom of the battery issues above. should go away after fixing those.
 
-special thanks to @MRX8024 for beta testing + feedback + many improvements.
+special thanks to [@MRX8024](https://github.com/MRX8024) for beta testing + feedback + many improvements.
 
 ## [Train Island 4.1](./fulgora-train4.txt)
 minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
