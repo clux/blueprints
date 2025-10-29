@@ -4,8 +4,13 @@ set -euxo pipefail
 FACTORIO=/media/euclid/SteamLibrary/steamapps/common/Factorio/bin/x64/factorio
 
 # 5x9 minute run on 8 islands trains syncd
-BENCHMARK=~/.factorio/saves/8-islands-final
-TICKS=32400
+# BENCHMARK=~/.factorio/saves/8-islands-final
+# BENCHMARK=~/.factorio/saves/island-comparisons
+BENCHMARK=~/.factorio/saves/fulgora-particle-cmp
+# BENCHMARK=~/.factorio/saves/8-island-debug-late
+# 5x15m
+# TICKS=54000
+TICKS=10800
 RUNS=5
 
 # 17% better performance from using my standard factorio wrapper on belt
