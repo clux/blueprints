@@ -4,10 +4,10 @@ python scripts to visualise csv data from [`belt`](https://github.com/florishafk
 
 ## Usage
 
-Configure `start.sh` with your benchmark params and game wrapper command (i use mimalloc + gamemode on linux).
+Configure `bench.sh` with your benchmark params and game wrapper command (i use mimalloc + gamemode on linux).
 
 ```sh
-./start.sh
+./bench.sh save-subfolder-containing-saves
 ```
 
 then prepare python deps / virtual env and
