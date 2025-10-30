@@ -17,7 +17,9 @@ comparing to abuc's old ore recyclers tuned to 7k for tungsten.
 
 ![recycler setup vulcanus](./recycler.png)
 
-including car production as a required part of the benchmark for train voiding, but excluding the cost of rocketfuel and molten iron.
+### Caveats
+- including car production costs but excluding q5 rocketfuel costs (get from fulgora islands) and molten iron
+- excluding space platform costs on recycler setup
 
 ### Benchmark Results
 ![ups breakdown](./results.png) + [report](./results.md).
