@@ -1,6 +1,6 @@
 # Vulvanus Tungsten Upcyclers
 
-**Beats silo+recycler based upcycling by >30% when disabling car particles.**
+**Beats silo+recycler based upcycling by >20% when disabling car particles.**
 
 **[blueprint](./train-voider-1.txt)**
 
