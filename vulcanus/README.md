@@ -2,19 +2,22 @@
 
 **Beats silo+recycler based upcycling by >30% when disabling car particles.**
 
-**[blueprint]()**
+**[blueprint](./train-voider-1.txt)**
 
 ## Setup
 Scaled for mining prod >5700
 
 Relies on @MRX8024 UPS mods; [disable-vehicle-particles](https://mods.factorio.com/mod/disable-vehicles-particles) + [disable-vehicles](https://mods.factorio.com/mod/disable-vehicles) (the particle one being the important one).
 
+## Benchmark
 
 ![train setup vulcanus](./train-voider.png)
 
 comparing to abuc's old ore recyclers tuned to 7k for tungsten.
 
 ![recycler setup vulcanus](./recycler.png)
+
+including car production as a required part of the benchmark for train voiding, but excluding the cost of rocketfuel and molten iron.
 
 ### Benchmark Results
 ![ups breakdown](./results.png) + [report](./results.md).
