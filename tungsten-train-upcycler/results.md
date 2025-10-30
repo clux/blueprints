@@ -5,7 +5,7 @@
 **Date:** 2025-10-30
 
 ## Scenario
-* Each save was tested for 10800 tick(s) and 3 run(s)
+* Each save was tested for 10800 tick(s) and 5 run(s)
 
 ## Results
 | Metric            | Description                           |
@@ -17,8 +17,8 @@
 
 | Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) | % Difference from base |
 |------|----------|----------|----------|-----|---------------------|------------------------|
-| recyclers | 0.279 | 0.201 | 1.370 | 3579 | 9050 | 0.00% |
-| car-voider-particleson | 0.255 | 0.149 | 0.965 | 3915 | 8274 | 9.38% |
-| car-voider | 0.232 | 0.128 | 1.022 | **4312** | 7512 | 20.48% |
+| recyclers | 0.531 | 0.436 | 2.515 | 1881 | 28702 | 0.00% |
+| car-voider-particleson | 0.425 | 0.214 | 1.919 | 2350 | 22970 | 24.96% |
+| car-voider | 0.352 | 0.161 | 1.680 | **2839** | 19019 | 50.91% |
 
 ## Conclusion

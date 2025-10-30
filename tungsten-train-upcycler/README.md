@@ -1,6 +1,6 @@
 # Vulvanus Tungsten Upcyclers
 
-**Beats silo+recycler based upcycling by 20% when disabling car particles.**
+**Beats silo+recycler based upcycling by >50% when disabling car particles.**
 
 **[blueprint](./train-voider-1.txt)**
 
@@ -18,9 +18,14 @@ comparing to abuc's old ore recyclers tuned to 7k for tungsten.
 
 ![recycler setup vulcanus](./recycler.png)
 
+
 ### Caveats
 - including car production costs but excluding q5 rocketfuel costs (get from fulgora islands) and molten iron
 - excluding space platform costs on recycler setup
+
+NB: tested with 4 copies of the above. could probably have scaled it more to offset the game's minimum game update, but this is not super precise anyway.
+
+the train recycler setup is not completely maxed either. i just took the one scaled for my metallurgic which is fine with like 95% - 98% so you might need to adjust tick timers / belt buffers to maxx it fully.
 
 ### Benchmark Results
 ![ups breakdown](./results.png) + [report](./results.md).
