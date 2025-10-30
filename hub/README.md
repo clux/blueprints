@@ -4,12 +4,21 @@ Hub scaled for the equivalent of 8 full green belts (8*240 science /s) pulling t
 
 **[VIDEO](https://www.youtube.com/watch?v=xeGZn7eqvY4)**
 
-Expects;
-
-- Q2 Cryo/Metallurgic
-- Q1 Electro (but can be retrofitted for Q2)
-- Q1 Agri/Promethean (hard to change as it's near the hub)
+Mostly an illustrative blueprint.
 
 Includes a calcite export train, a belt dedicated to bioflux + promethean token.
 
-There's also an emergency half belt for spoilage, but this shouldn't happen if you crush unused agri post-labs.
+### V2
+Expects 2 sciences to be uncommon;
+
+- Q2 Cryo/Metallurgic
+- Q1 Electro
+- Q5 Space
+- Q1 Agri/Promethean
+
+### V3
+Expects 3 sciences to be uncommon;
+
+- Q2 Cryo/Metallurgic/electro
+- Q5 Space
+- Q1 Agri/Promethean
