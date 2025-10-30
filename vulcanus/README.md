@@ -5,7 +5,8 @@
 **[blueprint](./train-voider-1.txt)**
 
 ## Setup
-Scaled for mining prod >5700
+Scaled for mining prod >5700.
+Highly specific mining patch setup. You'll probably need to adjust the train/rail setup in your base. This is a mostly a POC to show it's good, but it also reflects my actual use on my 3 best patches.
 
 Works best with @MRX8024 UPS mods; [disable-vehicle-particles](https://mods.factorio.com/mod/disable-vehicles-particles) + [disable-vehicles](https://mods.factorio.com/mod/disable-vehicles) (the particle one being the important one).
 
