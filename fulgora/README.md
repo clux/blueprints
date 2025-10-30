@@ -4,7 +4,7 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 
 **[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
 
-## [Train Island 5.22](./fulgora-train5.txt)
+## [Train Island 5.22](./fulgora-train-5.22.txt)
 full redesign. best performing variant. 240.9/s
 
 34% more UPS than V3. See the [v5-island-bench folder](./v5-island-bench).
