@@ -19,6 +19,12 @@ comparing to abuc's old ore recyclers tuned to 7k for tungsten.
 ### Benchmark Results
 ![ups breakdown](./results.png) + [report](./results.md).
 
-breakdowns;
+### breakdowns
+recycler setup:
 ![recycler breakdown](recycler-7k-breakdown.png)
+
+trains without particles (mods on)
 ![train breakdown](train-voider-breakdown.png)
+
+trains with particles (no mods)
+![train breakdown](train-voider-particles-breakdown.png)
