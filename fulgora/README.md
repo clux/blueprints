@@ -2,7 +2,8 @@
 
 q2 science island that exports enough aquilo components for equal parts q2 cryo and q1 promethean for aquilo.
 
-**[youtube](https://www.youtube.com/watch?v=NC3HJzfywt4) for version 3**
+- **[youtube video for V5](https://www.youtube.com/watch?v=0-6bzSRd308)**
+- **[youtube video for V3](https://www.youtube.com/watch?v=NC3HJzfywt4)**
 
 ## [Train Island 5.22](./fulgora-train-5.22.txt)
 full redesign. best performing variant. 240.9/s
