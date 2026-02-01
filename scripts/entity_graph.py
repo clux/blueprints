@@ -151,7 +151,7 @@ PARAM_COLUMNS = [
 "transportLinesUpdate",
 "electricHeatFluidCircuitUpdate",
 "electricNetworkUpdate",
-# "heatNetworkUpdate",
+"heatNetworkUpdate",
 "fluidFlowUpdate",
 "particleUpdate",
 "spacePlatforms",
