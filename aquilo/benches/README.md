@@ -64,6 +64,6 @@ compare v5 to v5 maximally separated;
 
 so the main takeaways is that you should do the easiest, least technical thing first;
 
-1. separate heat networks
+1. separate heat networks (reduce green area in graphs above)
 2. belt out components rather than use bots
 3. then clock and optimize
