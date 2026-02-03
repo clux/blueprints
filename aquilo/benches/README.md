@@ -2,7 +2,7 @@
 
 **Platform:** linux-x86_64
 **Factorio Version:** 2.0.73
-**Date:** 2026-02-01
+**Date:** 2026-02-03
 
 ## Scenario
 * Each save was tested for 32400 tick(s) and 5 run(s)
@@ -17,11 +17,11 @@
 
 | Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) | % Difference from base |
 |------|----------|----------|----------|-----|---------------------|------------------------|
-| clux-q2-blades-v1 | 0.537 | 0.389 | 4.977 | 1863 | 86918 | 0.00% |
-| clux-q2-blades-v1-heatsep | 0.415 | 0.283 | 5.016 | 2407 | 67287 | 29.18% |
-| clux-q2-blades-v3 | 0.378 | 0.246 | 4.938 | 2647 | 61200 | 42.02% |
-| clux-q2-blades-v5-miniheat | 0.370 | 0.233 | 4.361 | 2701 | 59965 | 44.95% |
-| clux-q2-blades-v5 | 0.364 | 0.225 | 4.544 | **2745** | 58999 | 47.32% |
+| clux-q2-blades-v1 | 0.534 | 0.385 | 5.089 | 1872 | 86511 | 0.00% |
+| clux-q2-blades-v1-heatsep | 0.413 | 0.272 | 5.010 | 2421 | 66907 | 29.30% |
+| clux-q2-blades-v3 | 0.378 | 0.239 | 4.811 | 2645 | 61234 | 41.28% |
+| clux-q2-blades-v5-miniheat | 0.363 | 0.216 | 4.239 | 2756 | 58774 | 47.19% |
+| clux-q2-blades-v5 | 0.361 | 0.219 | 4.444 | **2768** | 58508 | 47.86% |
 
 ## Conclusion
 This is basically comparing;
