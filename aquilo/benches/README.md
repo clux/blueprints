@@ -41,14 +41,14 @@ but look at the gap from just disconnecting the heat works (blue to orange line)
 almost a 30% UPS boost JUST from disconnecting the blades' heat pipes!
 
 compare the 2 v1 graphs (global network vs separated);
-![v1 global network](cryo-v1-global.png)
-![v1 separated network](cryo-v1-heatsep.png)
+![v1 global network](01-cryo-v1-global.png)
+![v1 separated network](02-cryo-v1-heatsep.png)
 
 ### V1 -> V3
 then there's the second gap, which goes to the v3 blade, still doesn't have great clocking, but it is the first blade to **not** use bots for rocket parts. another 10%. i am surprised this is not more, it's 400 bots active. the green line also clocks lithium.
 
 v3 graph
-![v3](cryo-v3.png)
+![v3](03-cryo-v3.png)
 
 ### V3 -> V5
 from green to purple is basically only the smaller tweaks; better clocking, car DI on ice upcycling, less fluid voiding cryos. less heat pipes (less fluids on bus).
@@ -58,9 +58,8 @@ this may end up being statistical noise, but it does suggest there may be a swee
 
 compare v5 to v5 maximally separated;
 
-![v5](cryo-v5.png)
-![v5 miniheat](cryo-v5-miniheat.png)
-
+![v5](04-cryo-v5.png)
+![v5 miniheat](05-cryo-v5-miniheat.png)
 
 so the main takeaways is that you should do the easiest, least technical thing first;
 
