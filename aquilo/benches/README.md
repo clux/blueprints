@@ -2,10 +2,10 @@
 
 **Platform:** linux-x86_64
 **Factorio Version:** 2.0.73
-**Date:** 2026-02-03
+**Date:** 2026-02-09
 
 ## Scenario
-* Each save was tested for 32400 tick(s) and 5 run(s)
+* Each save was tested for 32400 tick(s) and 25 run(s)
 
 ## Results
 | Metric            | Description                           |
@@ -17,19 +17,20 @@
 
 | Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) | % Difference from base |
 |------|----------|----------|----------|-----|---------------------|------------------------|
-| clux-q2-blades-v1 | 0.534 | 0.385 | 5.089 | 1872 | 86511 | 0.00% |
-| clux-q2-blades-v1-heatsep | 0.413 | 0.272 | 5.010 | 2421 | 66907 | 29.30% |
-| clux-q2-blades-v3 | 0.378 | 0.239 | 4.811 | 2645 | 61234 | 41.28% |
-| clux-q2-blades-v5-miniheat | 0.363 | 0.216 | 4.239 | 2756 | 58774 | 47.19% |
-| clux-q2-blades-v5 | 0.361 | 0.219 | 4.444 | **2768** | 58508 | 47.86% |
+| clux-q2-blades-v1 | 0.534 | 0.377 | 5.123 | 1872 | 86503 | 0.00% |
+| clux-q2-blades-v1-heatsep | 0.402 | 0.255 | 4.918 | 2486 | 65156 | 32.75% |
+| clux-q2-blades-v3 | 0.378 | 0.239 | 4.756 | 2643 | 61282 | 41.15% |
+| clux-q2-blades-v5 | 0.361 | 0.205 | 4.186 | 2768 | 58511 | 47.83% |
+| clux-q2-blades-v6 | 0.349 | 0.205 | 4.276 | **2862** | 56599 | 52.83% |
 
 ## Conclusion
 This is basically comparing;
 
-1. 8 blades of my current V5
-2. 8 blades of a previous V3 (with worse ice upcycling, and lithium less clocking overall)
-3. 8 blades of original V1 (using **bots** for rocket parts)
-4. 8 blades of original V1 (using **bots** and single **global heat network**)
+1. 8 blades of my current V6 (less heatpipes)
+2. 8 blades of a previous V5 (better clocking, less heatpipes)
+3. 8 blades of a previous V3 (with worse ice upcycling, and lithium less clocking overall)
+4. 8 blades of original V1 (using **bots** for rocket parts)
+5. 8 blades of original V1 (using **bots** and single **global heat network**)
 
 note that i am testing the full pipeline here, including rocket launches, had a dummy platform over aquilo that voided all requests. 5x5m run.
 
@@ -53,13 +54,13 @@ v3 graph
 ### V3 -> V5
 from green to purple is basically only the smaller tweaks; better clocking, car DI on ice upcycling, less fluid voiding cryos. less heat pipes (less fluids on bus).
 
-the red line was an experiment to see if i took heat pipes to an extreme, basically separate everything so that each blade had 9 separate neetworks. surprisingly this was worse.
-this may end up being statistical noise, but it does suggest there may be a sweet spot for how small you should make your heat networks.
-
-compare v5 to v5 maximally separated;
-
 ![v5](04-cryo-v5.png)
-![v5 miniheat](05-cryo-v5-miniheat.png)
+
+### V5 -> V6
+only real difference here is 100 less heatpipes per blade substituting with cars.
+tried optimizing gc on fluid voiding and it did nothing.
+
+![v6](06-cryo-v6.png)
 
 so the main takeaways is that you should do the easiest, least technical thing first;
 
