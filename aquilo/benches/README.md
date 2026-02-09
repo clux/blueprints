@@ -60,7 +60,7 @@ from green to purple is basically only the smaller tweaks; better clocking, car 
 only real difference here is 100 less heatpipes per blade substituting with cars.
 tried optimizing gc on fluid voiding and it did nothing.
 
-![v6](06-cryo-v6.png)
+![v6](05-cryo-v6.png)
 
 so the main takeaways is that you should do the easiest, least technical thing first;
 
