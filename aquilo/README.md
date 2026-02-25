@@ -11,7 +11,7 @@ Contains 3 Q2 blades described in the **[video](https://www.youtube.com/watch?v=
 - V7 Twin Blade 503/s :: 15 beacon twin variant blade variant, performs slightly worse.
 - V8 Solo Blade 242/s :: solo blade variant, performs slightly worse.
 
-See [Benchmark results](/scripts/cryo-bench/results.md) or the video for numbers.
+See the [v7-v8 cryo benchmark results](/scripts/cryo-bench/results.md), or the video, for numbers.
 
 ## [Quantum 7.0](./quantum-v7.txt)
 Optimization of V6;
