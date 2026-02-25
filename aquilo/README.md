@@ -3,10 +3,6 @@
 aquilo blueprints designed and benchmarked for 8 belts of prom science using q2 cryogenic.
 q2 holmium prerequisite (assumed to come from something like the [fulgora islands](../fulgora)).
 
-## [Quantum 6.0](./quantum-v6.txt)
-
-The quantum car blade from the **[video](https://www.youtube.com/watch?v=wCnDNrBy8-0)**.
-
 ## [Cryo V7/V8](./science-v8.txt)
 
 Contains 3 Q2 blades described in the **[video](https://www.youtube.com/watch?v=0XLs3IbV2Ic)**.
@@ -16,3 +12,14 @@ Contains 3 Q2 blades described in the **[video](https://www.youtube.com/watch?v=
 - V8 Solo Blade 242/s :: solo blade variant, performs slightly worse.
 
 See [Benchmark results](/scripts/cryo-bench/results.md) or the video for numbers.
+
+## [Quantum 7.0](./quantum-v7.txt)
+Optimization of V6;
+
+- improved beaconing by `Geist` (`9` -> `12` beacons, so production increased from 4500/m -> 5400/m)
+- crazy alternating car swing clock by `abuc` with hibernation system and backpressure toggle
+- rocket parts sushied for `-300` heat pipes
+
+## [Quantum 6.0](./quantum-v6.txt)
+
+The quantum car blade from the **[video](https://www.youtube.com/watch?v=wCnDNrBy8-0)**.
