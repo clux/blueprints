@@ -9,10 +9,10 @@ The quantum car blade from the **[video](https://www.youtube.com/watch?v=wCnDNrB
 
 ## [Cryo V7/V8](./science-v8.txt)
 
-Contains 3 Q2 blades.
+Contains 3 Q2 blades described in the **[video](https://www.youtube.com/watch?v=0XLs3IbV2Ic)**.
 
-- V7 Twin Blade 484/s :: from the **[video](https://www.youtube.com/watch?v=0XLs3IbV2Ic)**
-- V7 Twin Blade 503/s :: variant from same video (performs slightly worse)
-- V8 Solo Blade 242/s :: solo blade variant from same video (performs slightly worse)
+- V7 Twin Blade 484/s :: 14 beacon main twin blade in video, most performant.
+- V7 Twin Blade 503/s :: 15 beacon twin variant blade variant, performs slightly worse.
+- V8 Solo Blade 242/s :: solo blade variant, performs slightly worse.
 
 See [Benchmark results](/scripts/cryo-bench/results.md) or the video for numbers.
