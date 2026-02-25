@@ -41,9 +41,9 @@ Tests are using full launch pipeline with a ship voiding science using 6 launche
 ## Conclusion
 Priority for aquilo ups optimization in order depending on what you have done:
 
-1. separate heat networks (30-40% improvement on the table if you have it all in one network)
-2. belt out components rather than use bots (10% improvement on the table)
-3. clock, optimize, tweak (another 10%+)
+1. separate heat networks (30-40% improvement on the table if you have it all in one network, compare joined/separated)
+2. belt out components rather than use bots (10% improvement on the table, see gap to V3)
+3. clock, optimize, tweak (another 10%+, see V3 -> V7 gap)
 
 Going behind the dumb mistake of connecting all the heat networks; **heat pipe count** also matters relatively. Check your Heat Network costs in the debug menu (F5 + show entity time usage). Mine sits at `0.04` now.
 
