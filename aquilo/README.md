@@ -18,7 +18,7 @@ Optimization of V6;
 
 - improved beaconing by `Geist` (`9` -> `12` beacons, so production increased from 4500/m -> 5400/m)
 - crazy alternating car swing clock by `abuc` with hibernation system and backpressure toggle
-- rocket parts sushied for `-300` heat pipes
+- rocket parts sushied for `-300` heat pipes (i also helped :smile:)
 
 ## [Quantum 6.0](./quantum-v6.txt)
 
