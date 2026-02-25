@@ -7,18 +7,10 @@ q2 holmium prerequisite (assumed to come from something like the [fulgora island
 
 The quantum car blade from the [video](https://www.youtube.com/watch?v=wCnDNrBy8-0).
 
-## [Cryo 6.0](./cryo-v6.txt)
+## [Cryo V7/V8](./science-v8.txt)
 
-q2 cryo blade 240/s.
+Contains 3 Q2 blades.
 
-cryo blade instructions;
-
-- place, connect belts,
-- distribute rocketfuel so that it can self-insert from belts once it's thawed
-- place central tick networks for ice upcycling (28 tick to green, 65 tick to red)
-- place central tick network for science output
-- if ice jammed initially, empty all the left cars.
-
-## [Aquilo Center 6.0](./aquilo-v6.txt)
-
-centralised fluids for around ~6x blades.
+- V7 Twin Blade 484/s :: from the [video](https://www.youtube.com/watch?v=0XLs3IbV2Ic)
+- V7 Twin Blade 503/s :: variant from same video (performs slightly worse)
+- V8 Solo Blade 242/s :: solo blade variant from same video (performs slightly worse)

@@ -30,19 +30,21 @@ df_filtered = pd.concat(filtered_groups, ignore_index=True)
 sorted_save_names = sorted(mean_ups_dict, key=mean_ups_dict.get)
 worst_avg_ups = min(mean_ups_dict.values())
 
+fig, ax = plt.subplots()
 plt.figure(figsize=(10, 6))
 
 for save_name in sorted_save_names:
     group = df_filtered[df_filtered["save_name"] == save_name]
     mean_ups_filtered = mean_ups_dict[save_name]
     improvement_pct = (mean_ups_filtered - worst_avg_ups) / worst_avg_ups * 100
-    plt.plot(group["run_index"], group["effective_ups"], marker="o",
+    plt.plot(group["run_index"], group["effective_ups"], marker=5,
         label=f"{save_name} (avg UPS: {mean_ups_filtered:.2f}, +{improvement_pct:.1f}%)")
 
 plt.xlabel("Run index")
 plt.ylabel("Effective UPS")
 plt.title("UPS performance per run")
 plt.legend()
+plt.box(True)
 plt.grid(True)
 plt.tight_layout()
 
