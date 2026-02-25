@@ -1,11 +1,11 @@
 # Factorio Benchmark Results
 
 **Platform:** linux-x86_64
-**Factorio Version:** 2.0.73
-**Date:** 2026-02-09
+**Factorio Version:** 2.0.75
+**Date:** 2026-02-21
 
 ## Scenario
-* Each save was tested for 32400 tick(s) and 25 run(s)
+* Each save was tested for 108000 tick(s) and 40 run(s)
 
 ## Results
 | Metric            | Description                           |
@@ -17,53 +17,47 @@
 
 | Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) | % Difference from base |
 |------|----------|----------|----------|-----|---------------------|------------------------|
-| clux-q2-blades-v1 | 0.534 | 0.377 | 5.123 | 1872 | 86503 | 0.00% |
-| clux-q2-blades-v1-heatsep | 0.402 | 0.255 | 4.918 | 2486 | 65156 | 32.75% |
-| clux-q2-blades-v3 | 0.378 | 0.239 | 4.756 | 2643 | 61282 | 41.15% |
-| clux-q2-blades-v5 | 0.361 | 0.205 | 4.186 | 2768 | 58511 | 47.83% |
-| clux-q2-blades-v6 | 0.349 | 0.205 | 4.276 | **2862** | 56599 | 52.83% |
+| abuc-8x-joined | 0.523 | 0.267 | 4.700 | 1911 | 282548 | 19.70% |
+| abuc-8x-separated | 0.396 | 0.163 | 4.506 | 2524 | 213874 | 58.14% |
+| clux-twin-v7-4x_14beacon | 0.355 | 0.142 | 3.815 | **2816** | 191707 | 76.42% |
+| clux-twin-v7-4x_15beacon | 0.356 | 0.152 | 4.270 | 2805 | 192496 | 75.70% |
+| clux-v3-8x_11beacon | 0.378 | 0.207 | 4.724 | 2643 | 204300 | 65.55% |
+| clux-v8-8x_14beacon | 0.360 | 0.185 | 4.213 | 2779 | 194317 | 74.05% |
+| hobbit-16x-joined | 0.626 | 0.430 | 6.740 | 1596 | 338209 | 0.00% |
+| hobbit-16x-separated | 0.444 | 0.213 | 5.964 | 2250 | 239953 | 40.95% |
+
+## Setup
+
+This is basically comparing 4 of my blades (2 solo variants; v3 + v8, and 2 twin variants, v7 with 14 and 15 beaconing) against historical blades (Abuc's and Hobbits as a frame of reference).
+
+Tests are using full launch pipeline with a ship voiding science using 6 launches, then waiting on fulgora until sufficient time has passed so that throughput matches 240*16 science/s equivalent. It's described and shown in the blade video.
+
+![blade summary](./blade_summary.png)
+
+![box plot](./blade_box.png)
+
+![individual run results](./results.png).
 
 ## Conclusion
-This is basically comparing;
+Priority for aquilo ups optimization in order depending on what you have done:
 
-1. 8 blades of my current V6 (less heatpipes)
-2. 8 blades of a previous V5 (better clocking, less heatpipes)
-3. 8 blades of a previous V3 (with worse ice upcycling, and lithium less clocking overall)
-4. 8 blades of original V1 (using **bots** for rocket parts)
-5. 8 blades of original V1 (using **bots** and single **global heat network**)
+1. separate heat networks (30-40% improvement on the table if you have it all in one network)
+2. belt out components rather than use bots (10% improvement on the table)
+3. clock, optimize, tweak (another 10%+)
 
-note that i am testing the full pipeline here, including rocket launches, had a dummy platform over aquilo that voided all requests. 5x5m run.
+Going behind the dumb mistake of connecting all the heat networks; **heat pipe count** also matters relatively. Check your Heat Network costs in the debug menu (F5 + show entity time usage). Mine sits at `0.04` now.
 
-![ups breakdown](./results.png).
+## Minor Optimizations
+if you've done 1. and 2. Other things to do;
 
-### V1
-obviously the oldest blade, using bots, single heatnetwork is at the bottom.
-but look at the gap from just disconnecting the heat works (blue to orange line).
-almost a 30% UPS boost JUST from disconnecting the blades' heat pipes!
+- reduce heatpipes
+- sushi rocket components (less heatpipes), remove bot networks
+- max beacon (14/15) science (needs vehicles)
+- clock + DI lithium (can use generator)
+- clock science inserters (can use generator)
+- pressurise fluid voider (high value latch)
+- down-tune ice upcycler speed, maybe colocate with science
+- optimize load sequence (prevent silo targeting inserters from being active except while rocket comes up)
 
-compare the 2 v1 graphs (global network vs separated);
-![v1 global network](01-cryo-v1-global.png)
-![v1 separated network](02-cryo-v1-heatsep.png)
-
-### V1 -> V3
-then there's the second gap, which goes to the v3 blade, still doesn't have great clocking, but it is the first blade to **not** use bots for rocket parts. another 10%. i am surprised this is not more, it's 400 bots active. the green line also clocks lithium.
-
-v3 graph
-![v3](03-cryo-v3.png)
-
-### V3 -> V5
-from green to purple is basically only the smaller tweaks; better clocking, car DI on ice upcycling, less fluid voiding cryos. less heat pipes (less fluids on bus).
-
-![v5](04-cryo-v5.png)
-
-### V5 -> V6
-only real difference here is 100 less heatpipes per blade substituting with cars.
-tried optimizing gc on fluid voiding and it did nothing.
-
-![v6](05-cryo-v6.png)
-
-so the main takeaways is that you should do the easiest, least technical thing first;
-
-1. separate heat networks (reduce green area in graphs above)
-2. belt out components rather than use bots
-3. then clock and optimize
+at least these worked for me, and they bench positively.
+(kind of the TL;DR of the video ^)
