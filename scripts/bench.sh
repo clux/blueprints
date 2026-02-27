@@ -6,8 +6,8 @@ FACTORIO=/media/euclid/SteamLibrary/steamapps/common/Factorio/bin/x64/factorio
 BENCHMARK=~/.factorio/saves/${1}
 
 # 5x180s benchmark
-# TICKS=10800
-TICKS=108000
+TICKS=10800
+# TICKS=108000
 RUNS=5
 
 # 17% better performance from using my standard factorio wrapper on belt
