@@ -25,7 +25,7 @@
 ### Geist
 ![geist design](./geist-4x.png)
 
-- 12 cryos running at 235/s.
+- 12 cryos running at 235/s. (feeding 3 belts of sicence)
 - 4 copies producing 180k/s Q2 and 420k/s Q1
 [bp](./geist.txt)
 
@@ -33,7 +33,7 @@
 
 ![clux design](./clux-6x.png)
 
-- 20 cryos running at 114/s
+- 14 cryos running at 114/s (feeding 2 belts of science)
 - 6 copies producing 180k/s Q2 and 280k/s Q1
 
 [bp](./clux.txt)
