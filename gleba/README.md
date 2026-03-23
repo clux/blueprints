@@ -30,8 +30,8 @@ Ran a ~265k/m benchmark comparing
 and results gave basically
 
 - Hobbit; baseline
-- clux; +23%
-- Konage; +24%
+- clux; +23% perf
+- Konage; +24% perf
 
 using a 4 run test over 108000 ticks (`30m`)
 
