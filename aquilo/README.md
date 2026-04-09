@@ -3,6 +3,10 @@
 aquilo blueprints designed and benchmarked for 8 belts of prom science using q2 cryogenic.
 q2 holmium prerequisite (assumed to come from something like the [fulgora islands](../fulgora)).
 
+## [Cryo V9](./science-v9.txt)
+
+Contains the 15 beacon variant described in the **[blade update video](https://www.youtube.com/watch?v=8A15Uhcs6Ak)**.
+
 ## [Cryo V7/V8](./science-v8.txt)
 
 Contains 3 Q2 blades described in the **[video](https://www.youtube.com/watch?v=0XLs3IbV2Ic)**.
@@ -12,6 +16,14 @@ Contains 3 Q2 blades described in the **[video](https://www.youtube.com/watch?v=
 - V8 Solo Blade 242/s :: solo blade variant, performs slightly worse.
 
 See the [v7-v8 cryo benchmark results](/aquilo/cryo-v7-v8-bench/README.md), or the video, for numbers.
+
+## [Quantum 9.0](./quantum-v9.txt)
+
+- back pressure detection to auto-shutdown
+
+accidentally revved version number +2 in video so now it's standard
+talked about in the
+[blade update video](https://www.youtube.com/watch?v=8A15Uhcs6Ak)
 
 ## [Quantum 7.0](./quantum-v7.txt)
 Optimization of V6;
