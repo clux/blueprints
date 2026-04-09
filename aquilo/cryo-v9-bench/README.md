@@ -54,4 +54,4 @@ Thus you need to look at the ITEM (blue) breakdown only;
 
 ![blade summary comparison](cryo_comp_summary.png)
 
-And with this breakdown, abuc's (from his aquilo video), geists, and mine perform almost identically (within 1%).
+And with this breakdown, abuc's and mine are basically identical.
