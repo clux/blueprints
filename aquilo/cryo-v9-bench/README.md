@@ -8,11 +8,6 @@ as explained in original cryo blade video;
 - all tests have a giant fusion reactor to try to compensate for heat network bias (didn't work)
 - all cars disabled via mod
 
-```sh
-./run_bench.sh cryo-5stack
-```
-(with saves, not distributed widely).
-
 ## Sanitize Output
 to prove similar production rates;
 
