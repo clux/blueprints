@@ -3,6 +3,20 @@
 aquilo blueprints designed and benchmarked for 8 belts of prom science using q2 cryogenic.
 q2 holmium prerequisite (assumed to come from something like the [fulgora islands](../fulgora)).
 
+## [Fuel Blade V9](./fuel-v9.txt)
+Fuel blade supplying cryo + quantum blade with hot fluro and RF.
+Enough for 16 lane equivalent prom science.
+
+- 880*3 hot fluro/s (extendible to 4x without modifications)
+- ~50/s RF
+
+Intended to be the only thing that needs oil and water on aquilo.
+Clocks;
+- LF on hot fluro + production latched operation
+- Latch on amonia to ensure ice is going fully or not at all
+- belt latch by measuring one tile of belt for outputs elsewhere.
+
+
 ## [Cryo V9](./science-v9.txt)
 
 Contains the 15 beacon variant described in the **[blade update video](https://www.youtube.com/watch?v=8A15Uhcs6Ak)**.
