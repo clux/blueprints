@@ -46,11 +46,11 @@ see scripts.
 
 ## Conclusion
 
-Actually very misleading to look at this in isolation because my blades perform better because of large scale pointless heatpipe optimization.
+The raw numbers here are very misleading to look at in isolation because a big part of the reason why my blade perform so much better is because of large scale pointless heatpipe optimization that will not show up in the real game.
 
-Pointless because the optimizations - while they reduce calculations in total - they do not matter for your UPS as they are multithreaded and run together with fluid update and electric network calculations, and in the real game, this cost is always dominated by the electric network costs (unlike in benchmarks where heat pipe dominate because we only test one planet).
+The heat network optimizations - while they reduce calculations in total - do not matter for your UPS in a realistic scenario as they are multithreaded and run together with fluid update and electric network calculations, and in the real game, this cost is always dominated by the electric network costs (unlike in benchmarks where heat pipe dominate because we only test one planet).
 
-Thus you need to look at the ITEM (blue) breakdown only;
+Thus you need to look at the **enty cost** (blue bar) breakdown;
 
 ![blade summary comparison](cryo_comp_summary.png)
 
