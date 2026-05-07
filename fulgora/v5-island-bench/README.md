@@ -23,4 +23,16 @@
 | clux-v3-8x-115k-6s5s | 1.139 | 0.791 | 17.665 | 877 | 61530 | 48.44% |
 | clux-v5.22-115k-8s8s | 0.897 | 0.577 | 11.601 | **1115** | 48420 | 88.64% |
 
-## Conclusion
+## Discussion
+
+Rough comparison against MRX/abuc/hobbit's islands which was done for the [v5 video](https://www.youtube.com/watch?v=0-6bzSRd308). It's talked about in there.
+
+Uses UPS mods that benefits train voiding;
+![island comparison](./06-island-comparison.png)
+
+i.e. we disable particles and cars for the tests (which only affects the clux islands).
+
+![island comparison](./06-island-comparison.png)
+
+
+The other pngs in this folder compare v3,v4,v5 islands to show relative improvements.
