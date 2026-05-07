@@ -28,7 +28,7 @@
 Rough comparison against MRX/abuc/hobbit's islands which was done for the [v5 video](https://www.youtube.com/watch?v=0-6bzSRd308). It's talked about in there.
 
 Uses UPS mods that benefits train voiding;
-![island comparison](./06-island-comparison.png)
+![ups mods](./03-ups-mods.png)
 
 i.e. we disable particles and cars for the tests (which only affects the clux islands).
 
