@@ -1,6 +1,6 @@
 # Hub Layout and Roboport Comparison
 
-An appendix to the Megabase Hub Scaling video.
+An appendix to the [Megabase Hub Scaling video](https://www.youtube.com/watch?v=p5p1hsDT4BM).
 
 ## Results
 ![hub comparison](./hubcomp.png)
