@@ -13,6 +13,32 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 34% more UPS than V3. See the [v5-island-bench folder](./v5-island-bench).
 For the last 9% performance consider using @MRX8024 UPS mods; [disable-vehicle-particles](https://mods.factorio.com/mod/disable-vehicles-particles) + [disable-vehicles](https://mods.factorio.com/mod/disable-vehicles). the particle mod is the most advantageous.
 
+### Warnings
+
+- not compatible with v3/v4. tear down old island and replant.
+- do not replant vehicle stages twice (otherwise bots will get stuck, and some vehicles become non-insertable. remove vehicles from blueprints if replanting).
+- plant blueprints **in order** with playtime between them (not editor paused). why?:
+  * inserters need to target correct vehicles before beacons or rails are placed
+  * inserters by RF needs to target assembler before car is placed
+  * beacons need to activate before ingredient flow in Q2 (otherwise accumulator EMs/supers can get soft-locked)
+
+### Debugging
+If you have broken deploys / softlocks:
+- low batteries or science components?
+  * inserters to outer cars stuck "waiting for train"? temporarily remove rails UNDER the car to force target the car.
+  * accumulator inserters stuck? replant them. can happen if started before beacons were down with modules.
+  * accumulator EMs stuck with 15 output? we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the given measurement. can also happen with early lack of beacons.
+- bots stuck placing vehicles over other vehicles? manually fix, pick up bots, or place a yellow chest and cancel building requests. replant vehicles from blueprint (ideally not triggering the same issue)
+- out of cars? car production cannot exceed [84 cars/m](https://factoriolab.github.io/spa/list?z=eJw1jzEOgzAMRW-TIUNFCrQsXpxWYqASQ09A1QHUQBsQlRh89n5XYbD.c75tORONtirMk6w3HVU2Q3aaKkSBOOnD0US6ZNbCBtx2WAEO4CNAe3wLyNX6AgqFGVAqLHvz528F4kaHoLnOQIdU10nHpDHpQRf084K7wjtSaUKItMlZcuFGeBMGDMK18Cgche.Cq3ArfDBd6PGvLDOv6UEs3l7NSs79ABXuRJE_&v=11) (roughly 5000 cars/h) with the single 8 beacon engine assembler (do not lower train waits too much - it doesn't help much beyond rapid == 5s + 5s anyway)
+- some science EMs not outputting? replant the beacon next to the output inserter to force re-targeting of the buffer tank.
+- q2 silos full / stuck? usually a symptom of the battery issues above. should go away after fixing those.
+- hibernation system not always working? Could happen on 5.22. apply service patch linked above.
+
+special thanks to [@MRX8024](https://github.com/MRX8024) for beta testing + feedback + many improvements.
+
+### Changelog
+Changes since V4:
+
 - 4 silos per island (down from 20)
 - multi stage blueprint to help avoid placement errors
 - common items/fluids produced on the main bus and shared across halves
@@ -48,26 +74,6 @@ For the last 9% performance consider using @MRX8024 UPS mods; [disable-vehicle-p
 - dynamic export system; capture excess q2 holmium if sufficient holmium fluid (will speed up the train until buffers are full)
 - scrap use: dynamic based holmium exports; Q1 120k/m rapid, 109k/m regular. Q2 35k/m rapid, 32k/m regular
 - holmium export; excess 625 q2 plates/m on rapid / 0 q2 plates/m on regular
-
-Warnings:
-- not compatible with v3/v4. tear down old island and replant.
-- do not replant vehicle stages twice (otherwise bots will get stuck, and some vehicles become non-insertable. remove vehicles from blueprints if replanting).
-- plant blueprints **in order** with playtime between them (not editor paused). why?:
-  * inserters need to target correct vehicles before beacons or rails are placed
-  * inserters by RF needs to target assembler before car is placed
-  * beacons need to activate before ingredient flow in Q2 (otherwise accumulator EMs/supers can get soft-locked)
-
-Debugging / Fixing broken deploys / softlocks:
-- low batteries or science components?
-  * inserters to outer cars stuck "waiting for train"? temporarily remove rails UNDER the car to force target the car.
-  * accumulator inserters stuck? replant them. can happen if started before beacons were down with modules.
-  * accumulator EMs stuck with 15 output? we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the given measurement. can also happen with early lack of beacons.
-- bots stuck placing vehicles over other vehicles? manually fix, pick up bots, or place a yellow chest and cancel building requests. replant vehicles from blueprint (ideally not triggering the same issue)
-- out of cars? car production cannot exceed [84 cars/m](https://factoriolab.github.io/spa/list?z=eJw1jzEOgzAMRW-TIUNFCrQsXpxWYqASQ09A1QHUQBsQlRh89n5XYbD.c75tORONtirMk6w3HVU2Q3aaKkSBOOnD0US6ZNbCBtx2WAEO4CNAe3wLyNX6AgqFGVAqLHvz528F4kaHoLnOQIdU10nHpDHpQRf084K7wjtSaUKItMlZcuFGeBMGDMK18Cgche.Cq3ArfDBd6PGvLDOv6UEs3l7NSs79ABXuRJE_&v=11) (roughly 5000 cars/h) with the single 8 beacon engine assembler (do not lower train waits too much - it doesn't help much beyond rapid == 5s + 5s anyway)
-- some science EMs not outputting? replant the beacon next to the output inserter to force re-targeting of the buffer tank.
-- q2 silos full / stuck? usually a symptom of the battery issues above. should go away after fixing those.
-
-special thanks to [@MRX8024](https://github.com/MRX8024) for beta testing + feedback + many improvements.
 
 ## [Train Island 4.1](./fulgora-train4.txt)
 2025 September 28.
