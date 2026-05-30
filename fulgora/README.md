@@ -21,18 +21,21 @@ For the last 9% performance consider using @MRX8024 UPS mods; [disable-vehicle-p
   * inserters need to target correct vehicles before beacons or rails are placed
   * inserters by RF needs to target assembler before car is placed
   * beacons need to activate before ingredient flow in Q2 (otherwise accumulator EMs/supers can get soft-locked)
+- ensure you put bots in the network. 10-20 construction center. 5-20 logistic in outer 4 networks. Do NOT connect robot networks to anything larger.
 
-### Debugging
-If you have broken deploys / softlocks:
+### Common Issues
+Some issues that can result from not applying blueprints correctly / starting partially deployed / not applying service patch / joining robot networks.
+
 - low batteries or science components?
   * inserters to outer cars stuck "waiting for train"? temporarily remove rails UNDER the car to force target the car.
   * accumulator inserters stuck? replant them. can happen if started before beacons were down with modules.
   * accumulator EMs stuck with 15 output? we pull 16 at a time, and this should always work unless belt backs up, and the belt should never back up with the given measurement. can also happen with early lack of beacons.
-- bots stuck placing vehicles over other vehicles? manually fix, pick up bots, or place a yellow chest and cancel building requests. replant vehicles from blueprint (ideally not triggering the same issue)
-- out of cars? car production cannot exceed [84 cars/m](https://factoriolab.github.io/spa/list?z=eJw1jzEOgzAMRW-TIUNFCrQsXpxWYqASQ09A1QHUQBsQlRh89n5XYbD.c75tORONtirMk6w3HVU2Q3aaKkSBOOnD0US6ZNbCBtx2WAEO4CNAe3wLyNX6AgqFGVAqLHvz528F4kaHoLnOQIdU10nHpDHpQRf084K7wjtSaUKItMlZcuFGeBMGDMK18Cgche.Cq3ArfDBd6PGvLDOv6UEs3l7NSs79ABXuRJE_&v=11) (roughly 5000 cars/h) with the single 8 beacon engine assembler (do not lower train waits too much - it doesn't help much beyond rapid == 5s + 5s anyway)
+- bots stuck placing vehicles over other vehicles? happens on double vehicle blueprint placement. manually fix, pick up bots, or place a yellow chest and cancel building requests. replant vehicles from blueprint.
 - some science EMs not outputting? replant the beacon next to the output inserter to force re-targeting of the buffer tank.
 - q2 silos full / stuck? usually a symptom of the battery issues above. should go away after fixing those.
 - hibernation system not always working? Could happen on 5.22. apply service patch linked above.
+- out of cars? apply service patch to avoid hybernation system bug draining cars.
+  * note that car production cannot exceed [84 cars/m](https://factoriolab.github.io/spa/list?z=eJw1jzEOgzAMRW-TIUNFCrQsXpxWYqASQ09A1QHUQBsQlRh89n5XYbD.c75tORONtirMk6w3HVU2Q3aaKkSBOOnD0US6ZNbCBtx2WAEO4CNAe3wLyNX6AgqFGVAqLHvz528F4kaHoLnOQIdU10nHpDHpQRf084K7wjtSaUKItMlZcuFGeBMGDMK18Cgche.Cq3ArfDBd6PGvLDOv6UEs3l7NSs79ABXuRJE_&v=11) (so don't tune trains faster than rapid, won't help much anyway)
 
 special thanks to [@MRX8024](https://github.com/MRX8024) for beta testing + feedback + many improvements.
 
