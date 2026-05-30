@@ -1,4 +1,14 @@
-# 8 belt Hub
+# Nauvis Hubs
+
+## 16 belt
+
+Hub scaled for the equivalent of 16 full belts of all outer sciences.
+
+**[VIDEO](https://www.youtube.com/watch?v=p5p1hsDT4BM)**
+
+See also [benchmarks](./port-bench)
+
+## 8 belt
 
 Hub scaled for the equivalent of 8 full green belts (8*240 science /s) pulling the 5 space sciences.
 
