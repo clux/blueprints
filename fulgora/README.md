@@ -6,9 +6,12 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 - **[youtube video for V3](https://www.youtube.com/watch?v=NC3HJzfywt4)**
 
 ## [Train Island 5.22](./fulgora-train-5.22.txt)
-full redesign. best performing variant. 240.9/s
+2025 October design.
+2026 May. [service patch 5.22.1](./fulgora-train-5.22.1-patch.txt) to fix some deadlocks related to hibernation system. See [PR](https://github.com/clux/blueprints/pull/6)).
 
+**Current best performing variant. 240.9/s**
 34% more UPS than V3. See the [v5-island-bench folder](./v5-island-bench).
+For the last 9% performance consider using @MRX8024 UPS mods; [disable-vehicle-particles](https://mods.factorio.com/mod/disable-vehicles-particles) + [disable-vehicles](https://mods.factorio.com/mod/disable-vehicles). the particle mod is the most advantageous.
 
 - 4 silos per island (down from 20)
 - multi stage blueprint to help avoid placement errors
@@ -46,16 +49,15 @@ full redesign. best performing variant. 240.9/s
 - scrap use: dynamic based holmium exports; Q1 120k/m rapid, 109k/m regular. Q2 35k/m rapid, 32k/m regular
 - holmium export; excess 625 q2 plates/m on rapid / 0 q2 plates/m on regular
 
-caveats:
+Warnings:
 - not compatible with v3/v4. tear down old island and replant.
-- do not replant vehicles twice (unless you remove the vehicles from stage blueprints; bots will get stuck, and some vehicles become non-insertable)
-- plant blueprints in order with playtime between them (not editor paused)
+- do not replant vehicle stages twice (otherwise bots will get stuck, and some vehicles become non-insertable. remove vehicles from blueprints if replanting).
+- plant blueprints **in order** with playtime between them (not editor paused). why?:
   * inserters need to target correct vehicles before beacons or rails are placed
   * inserters by RF needs to target assembler before car is placed
   * beacons need to activate before ingredient flow in Q2 (otherwise accumulator EMs/supers can get soft-locked)
-- for the last 9% performance consider using @MRX8024 UPS mods; [disable-vehicle-particles](https://mods.factorio.com/mod/disable-vehicles-particles) + [disable-vehicles](https://mods.factorio.com/mod/disable-vehicles). the particle mod is the most advantageous.
 
-fixing broken deploys / softlocks:
+Debugging / Fixing broken deploys / softlocks:
 - low batteries or science components?
   * inserters to outer cars stuck "waiting for train"? temporarily remove rails UNDER the car to force target the car.
   * accumulator inserters stuck? replant them. can happen if started before beacons were down with modules.
@@ -68,6 +70,8 @@ fixing broken deploys / softlocks:
 special thanks to [@MRX8024](https://github.com/MRX8024) for beta testing + feedback + many improvements.
 
 ## [Train Island 4.1](./fulgora-train4.txt)
+2025 September 28.
+
 minor tweaks on 3 and optimizations from feedback. cars and inserters are breaking changes.
 
 - tweaked q2 trashing to use less inserters and circuits with thresholds
@@ -87,6 +91,7 @@ if migrating from 3 -> 4.1;
 - fix stuck bots and repopulate bot networks if necessary
 
 ## [Train Island 3.0](./fulgora-train3.txt)
+2025 September 02.
 
 - 240.8 q2 em science / s
 - 4.75k q2 holm / m (250/m excess for exports)
