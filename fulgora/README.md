@@ -5,6 +5,10 @@ q2 science island that exports enough aquilo components for equal parts q2 cryo 
 - **[youtube video for V5](https://www.youtube.com/watch?v=0-6bzSRd308)**
 - **[youtube video for V3](https://www.youtube.com/watch?v=NC3HJzfywt4)**
 
+## Train Island 6.0-beta
+2026 August Design for Factorio 2.1
+In beta.
+
 ## [Train Island 5.22](./fulgora-train-5.22.txt)
 2025 October design.
 2026 May. [service patch 5.22.1](./fulgora-train-5.22.1-patch.txt) to fix some deadlocks related to hibernation system. See [PR](https://github.com/clux/blueprints/pull/6)).
