@@ -21,7 +21,7 @@ RUNS=3
 
 # ITEMS="metallurgic-science-pack"
 # ITEMS="cryogenic-science-pack"
-# ITEMS="electromagnetic-science-pack"
+ITEMS="electromagnetic-science-pack"
 # ITEMS="agricultural-science-pack"
 # optional file prefix to limit benchmarking within a folder
 PATTERN=" "
