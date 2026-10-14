@@ -2,8 +2,13 @@
 
 q2 science island that exports enough aquilo components for equal parts q2 cryo and q1 promethean for aquilo.
 
+- **[youtube video for V6 basic](https://www.youtube.com/watch?v=5V_Kv4d9MoE)**
 - **[youtube video for V5](https://www.youtube.com/watch?v=0-6bzSRd308)**
 - **[youtube video for V3](https://www.youtube.com/watch?v=NC3HJzfywt4)**
+
+## Train Island 6.2
+**[BASIC VERSION](./v6.2-basic.txt)
+2026 August Design for Factorio 2.1
 
 ## [Train Island 5.22](./fulgora-train-5.22.txt)
 2025 October design.

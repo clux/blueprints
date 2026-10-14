@@ -1,21 +1,15 @@
 # Benchmarking scripts
 
-python scripts to visualise csv data from [`belt`](https://github.com/florishafkenscheid/belt).
+benchmarking wrapper around [`belt`](https://github.com/florishafkenscheid/belt) and visualisations via [`belt-charts`](https://github.com/abucnasty/belt-charts)
 
 ## Usage
 
 Configure `bench.sh` with your benchmark params and game wrapper command (i use mimalloc + gamemode on linux).
 
 ```sh
-./bench.sh save-subfolder-containing-saves
+./bench.sh save-subfolder-containing-saves 'optional-prefix*'
 ```
 
-then prepare python deps / virtual env and
-
 ```sh
-# main graph
-python main_graph.py -f results.csv
-
-# breakdown graph of a specific entry
-python entity_graph.py --csv specific.csv --output specific-breakdown.png
+./chart.sh
 ```
