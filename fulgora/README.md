@@ -22,7 +22,7 @@ Redesign for factorio 2.1. Main changes;
 - less launching silos (q5 silos faster in 2.1)
 - fits on size 10 (default 100%) patches
 - 40% perf improvement over v5 (relative, in benchmarks). 50% on entities.
-  * assumes advanced version, the base version is a little worse. see benchmarks
+  * assumes advanced version, the base version is a little worse. see [v6 benchmarks](https://github.com/clux/blueprints/tree/main/fulgora/v6-island-bench)
 
 debugging;
 1. inserters not touching cars? remove rails under cars for a second, then undo. inserters must lock on to cars, not the rails.
