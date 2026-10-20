@@ -2,13 +2,33 @@
 
 q2 science island that exports enough aquilo components for equal parts q2 cryo and q1 promethean for aquilo.
 
+- **[youtube video for V6 advanced](https://www.youtube.com/watch?v=poFNbRx1Cro)**
 - **[youtube video for V6 basic](https://www.youtube.com/watch?v=5V_Kv4d9MoE)**
 - **[youtube video for V5](https://www.youtube.com/watch?v=0-6bzSRd308)**
 - **[youtube video for V3](https://www.youtube.com/watch?v=NC3HJzfywt4)**
 
-## Train Island 6.2
-**[BASIC VERSION](./v6.2-basic.txt)
-2026 August Design for Factorio 2.1
+## [Train Island 6.4](./v6.4-basic.txt)
+Redesign for factorio 2.1. Main changes;
+
+- less q1 recyclers (-8) => fewer cars => less holmium
+- more cursed car inserters (need to grab more stuff from fewer cars)
+- Yuu6883 's EM plant upcyclers from his island with some modifications
+- smarter sorting management in quadrants, only one silo for q2 sorting
+- centralised science (north*)
+- dynamic rail control (void center on alternation, void top right every N trips)
+- control center for clocks over radar
+- cars on rails now only build order issue (no tanks)
+- only 2 bot areas (logistic exports south, construction cars center)
+- less launching silos (q5 silos faster in 2.1)
+- fits on size 10 (default 100%) patches
+- 40% perf improvement over v5 (relative, in benchmarks). 50% on entities.
+  * assumes advanced version, the base version is a little worse. see benchmarks
+
+debugging;
+1. inserters not touching cars? remove rails under cars for a second, then undo. inserters must lock on to cars, not the rails.
+2. nothing is moving? place the control center.
+
+NB; the first v6 video is showcasing [6.2](./v6.2-basic.txt) which is basic only. 6.4 without the advanced layer can be force placed over for a small performance boost (but you have to upgrade the control center also).
 
 ## [Train Island 5.22](./fulgora-train-5.22.txt)
 2025 October design.
